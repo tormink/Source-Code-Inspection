@@ -14,6 +14,7 @@ public class TicketMachine {
     private final int VALOR;
     
     private int saldo;
+    private Troco troco;
     
     public TicketMachine(int valor) {
         this.VALOR = valor;
