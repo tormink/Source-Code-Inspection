@@ -16,7 +16,7 @@ public class TicketMachine {
     private int saldo;
     
     public TicketMachine(int valor) {
-        this.valor = valor;
+        this.VALOR = valor;
         this.saldo = 0;
     }
 
@@ -42,7 +42,7 @@ public class TicketMachine {
     }
 
     public String imprimir() throws SaldoInsuficienteException {
-        if (saldo < valor) {
+        if (saldo < VALOR) {
             throw new SaldoInsuficienteException();
         }
         String result = "*****************\n";
