@@ -12,10 +12,10 @@ public class TicketMachine {
 
     private final int[] PAPELMOEDA = {2, 5, 10, 20, 50, 100};
     private final int PRECODOBILHETE;
-    
+
     private int saldo;
     private Troco troco;
-    
+
     public TicketMachine(int valor) {
         this.PRECODOBILHETE = valor;
         this.saldo = 0;
@@ -38,8 +38,9 @@ public class TicketMachine {
         return saldo;
     }
 
-    public Iterator<Integer> getTroco() {
-        return null;
+    public Iterator<Double> getTroco() {
+        Troco troco = new Troco(this.PRECODOBILHETE);
+        return (Iterator<Double>) troco;
     }
 
     public String imprimir() throws SaldoInsuficienteException {
